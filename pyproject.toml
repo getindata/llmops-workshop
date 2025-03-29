@@ -6,10 +6,12 @@ authors = ["Marek Wieiwórka <marek.wiewiorka@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "<3.13,>=3.9"
+python = "<3.13,>=3.10"
 dspy = "^2.6.16"
 langfuse = "^2.60.2"
 ipykernel = "^6.29.5"
+polars = "^1.26.0"
+matplotlib= "^3.10.1"
 #torch = "^2.5.0"
 #torchvision = "^0.20.0"
 #torchao = "^0.5.0"
