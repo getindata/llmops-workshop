@@ -6,7 +6,7 @@ authors = ["Marek Wieiwórka <marek.wiewiorka@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 dspy-ai = "^2.6.16"
 langfuse = "^2.60.2"
 ipykernel = "^6.29.5"
