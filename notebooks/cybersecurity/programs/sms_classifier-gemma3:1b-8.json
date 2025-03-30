@@ -1,0 +1,63 @@
+{
+  "generate_answer": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sms_text": "Usf I guess, might as well take 1 car",
+        "category": "ham"
+      },
+      {
+        "augmented": true,
+        "sms_text": "Its good to hear from you",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Mobile Office & MMS settings have been successfully delivered on your phone! Now you can access Airtel Live by long pressing '0' key on Nokia. On other Phones launch Internet Browser and select Airtel Live (or goto http:\/\/live.airtelworld.com),  You pay no activation,  rental or browsing charges for Airtel Live. You only pay if you Download Content,  or Send MMS.",
+        "category": "spam"
+      },
+      {
+        "sms_text": "Was a nice day and, impressively, i was sensible, went home early and now feel fine. Or am i just boring?! When's yours, i can't remember.",
+        "category": "ham"
+      },
+      {
+        "sms_text": "She left it very vague. She just said she would inform the person in accounting about the delayed rent and that i should discuss with the housing agency about my renting another place. But checking online now and all places around usc are  &lt;#&gt;  and up",
+        "category": "ham"
+      },
+      {
+        "sms_text": "FREE GAME. Get Rayman Golf 4 FREE from the O2 Games Arcade. 1st get UR games settings. Reply POST, then save & activ8. Press 0 key for Arcade. Termsapply",
+        "category": "spam"
+      },
+      {
+        "sms_text": "Check audrey's status right now",
+        "category": "ham"
+      },
+      {
+        "sms_text": "I guess you could be as good an excuse as any, lol.",
+        "category": "ham"
+      }
+    ],
+    "signature": {
+      "instructions": "Given an SMS text, predict whether it is ham, spam, or smishing.\nOutput only the predicted label.",
+      "fields": [
+        {
+          "prefix": "Sms Text:",
+          "description": "${sms_text}"
+        },
+        {
+          "prefix": "Category:",
+          "description": "${category}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.16",
+      "cloudpickle": "3.1"
+    }
+  }
+}

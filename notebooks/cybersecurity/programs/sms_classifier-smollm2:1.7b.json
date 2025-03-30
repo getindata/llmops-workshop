@@ -1,0 +1,65 @@
+{
+  "generate_answer": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sms_text": "Dare i ask... Any luck with sorting out the car?",
+        "category": "ham"
+      },
+      {
+        "augmented": true,
+        "sms_text": "What your plan for pongal?",
+        "category": "ham"
+      },
+      {
+        "augmented": true,
+        "sms_text": "Just looked it up and addie goes back Monday, sucks to be her",
+        "category": "ham"
+      },
+      {
+        "augmented": true,
+        "sms_text": "Oh right, ok. I'll make sure that i do loads of work during the day!  got a really nasty cough today and is dry n shot so that should really help it!",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Usf I guess, might as well take 1 car",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Lol well don't do it without me. We could have a big sale together.",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Delhi and chennai still silent.",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Yo, any way we could pick something up tonight?",
+        "category": "ham"
+      }
+    ],
+    "signature": {
+      "instructions": "Given an SMS text, predict whether it is ham, spam, or smishing.\nOutput only the predicted label.",
+      "fields": [
+        {
+          "prefix": "Sms Text:",
+          "description": "${sms_text}"
+        },
+        {
+          "prefix": "Category:",
+          "description": "${category}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.16",
+      "cloudpickle": "3.1"
+    }
+  }
+}

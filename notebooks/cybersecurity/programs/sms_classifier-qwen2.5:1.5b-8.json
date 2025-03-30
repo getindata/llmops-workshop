@@ -1,0 +1,63 @@
+{
+  "generate_answer": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sms_text": "Jus ans me lar. U'll noe later.",
+        "category": "ham"
+      },
+      {
+        "augmented": true,
+        "sms_text": "Just getting back home",
+        "category": "ham"
+      },
+      {
+        "sms_text": "You have an important customer service announcement. Call FREEPHONE 0800 542 0826 now!",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "Hmmm... Guess we can go 4 kb n power yoga... Haha, dunno we can tahan power yoga anot... Thk got lo oso, forgot liao...",
+        "category": "ham"
+      },
+      {
+        "sms_text": "YOU VE WON! Your 4* Costa Del Sol Holiday or \u00a36000 await collection. Call 09050090055 Now toClaim. SAE, TC s, POBox334, Stockport, SK38xh, Cost\u00a31.50\/pm, Max10mins",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "Aiyar hard 2 type. U later free then tell me then i call n scold n tell u.",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Loans for any purpose even if you have Bad Credit! Tenants Welcome. Call NoWorriesLoans.com on 08717111821",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "Our records indicate u maybe entitled to 5000 pounds in compensation for the Accident you had. To claim 4 free reply with CLAIM to this msg. 2 stop txt STOP",
+        "category": "smishing"
+      }
+    ],
+    "signature": {
+      "instructions": "Given an SMS text, predict whether it is ham, spam, or smishing.\nOutput only the predicted label.",
+      "fields": [
+        {
+          "prefix": "Sms Text:",
+          "description": "${sms_text}"
+        },
+        {
+          "prefix": "Category:",
+          "description": "${category}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.16",
+      "cloudpickle": "3.1"
+    }
+  }
+}

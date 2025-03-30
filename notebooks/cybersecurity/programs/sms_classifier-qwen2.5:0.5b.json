@@ -1,0 +1,62 @@
+{
+  "generate_answer": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "sms_text": "Still i have not checked it..",
+        "category": "ham"
+      },
+      {
+        "sms_text": "YOU VE WON! Your 4* Costa Del Sol Holiday or \u00a36000 await collection. Call 09050090055 Now toClaim. SAE, TC s, POBox334, Stockport, SK38xh, Cost\u00a31.50\/pm, Max10mins",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "Loans for any purpose even if you have Bad Credit! Tenants Welcome. Call NoWorriesLoans.com on 08717111821",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "URGENT! Your Mobile number has been awarded with a INR.2,00,000 prize GUARANTEED. Call 6299257179 from land line. Claim 3030. Valid 12hrs only",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "Free msg. Sorry, a service you ordered from 81303 could not be delivered as you do not have sufficient credit. Please top up to receive the service.",
+        "category": "spam"
+      },
+      {
+        "sms_text": "Yup i'm free...",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Urgent Please call 09066612661 from landline. \u00a35000 cash or a luxury 4* Canary Islands Holiday await collection. T&Cs SAE award. 20M12AQ. 150ppm. 16+ \u201c",
+        "category": "smishing"
+      },
+      {
+        "sms_text": "1st wk FREE! Gr8 tones str8 2 u each wk. Txt NOKIA ON to 8007 for Classic Nokia tones or HIT ON to 8007 for Polys. Nokia\/150p Poly\/200p 16+",
+        "category": "spam"
+      }
+    ],
+    "signature": {
+      "instructions": "Given an SMS text, predict whether it is ham, spam, or smishing.\nOutput only the predicted label.",
+      "fields": [
+        {
+          "prefix": "Sms Text:",
+          "description": "${sms_text}"
+        },
+        {
+          "prefix": "Category:",
+          "description": "${category}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.16",
+      "cloudpickle": "3.1"
+    }
+  }
+}

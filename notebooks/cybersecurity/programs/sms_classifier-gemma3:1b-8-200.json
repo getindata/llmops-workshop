@@ -1,0 +1,61 @@
+{
+  "generate_answer": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "sms_text": "Ok... Help me ask if she's working tmr a not?",
+        "category": "ham"
+      },
+      {
+        "sms_text": "I don't know, same thing that's wrong everyso often, he panicks starts goin on bout not bein good enough \u2026",
+        "category": "ham"
+      },
+      {
+        "sms_text": "How come?",
+        "category": "ham"
+      },
+      {
+        "sms_text": "I just lov this line: \"Hurt me with the truth, I don't mind,i wil tolerat.bcs ur my someone..... But, Never comfort me with a lie\" gud ni8 and sweet dreams",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Our Stock In News Call : Mcleod Russel Earns Intraday Profit of Rs 32, 780. To Subscribe Our Equity Or F&O Advisory Service visit www.StockInNews.com",
+        "category": "spam"
+      },
+      {
+        "sms_text": "A bit of Ur smile is my hppnss, a drop of Ur tear is my sorrow, a part of Ur heart is my life, a heart like mine wil care for U, forevr as my GOODFRIEND",
+        "category": "ham"
+      },
+      {
+        "sms_text": "I'm in school now n i'll be in da lab doing some stuff give me a call when \u00fc r done.",
+        "category": "ham"
+      },
+      {
+        "sms_text": "Don know..wait i will check it.",
+        "category": "ham"
+      }
+    ],
+    "signature": {
+      "instructions": "Given an SMS text, predict whether it is ham, spam, or smishing.\nOutput only the predicted label.",
+      "fields": [
+        {
+          "prefix": "Sms Text:",
+          "description": "${sms_text}"
+        },
+        {
+          "prefix": "Category:",
+          "description": "${category}"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.16",
+      "cloudpickle": "3.1"
+    }
+  }
+}
