@@ -1,8 +1,11 @@
-from langfuse import Langfuse
+import logging
 
+from langfuse import Langfuse
+import dspy
 import matplotlib.pyplot as plt
 import numpy as np
 
+from langfuse_extensions import EvaluateWithLangfuse
 
 langfuse = Langfuse()
 
@@ -87,3 +90,29 @@ def plot_metrics(metrics, labels, title):
     ax.grid(True)
     fig.set_size_inches(12, 5)
     plt.show()
+
+
+def run_evaluation(models, program , test_ds, classes,  timestamp, prefix="baseline", cache=False):
+    for model in models:
+        logging.info(f"Evaluating {model}")
+        lm=dspy.LM(f"ollama/{model}", cache=cache)
+        dspy.settings.configure(lm=lm, track_usage=False)
+        session_id = f"{prefix}-{model}-{timestamp}"
+        evaluator = EvaluateWithLangfuse(
+            devset=test_ds,
+            num_threads=1,
+            display_progress=True,
+            session_id=session_id,
+            lm=lm,
+            provide_traceback=True,
+        )
+
+        dspy.configure(callbacks=[evaluator])
+        evaluator(program=program, metric=validate_answer)
+
+def get_all_metric(models, timestamp, classes, prefix="baseline"):
+    metrics = dict()
+    for model in models:
+        traces = fetch_traces(run_id=f"{prefix}-{model}-{timestamp}")
+        metrics[model] = calculate_metrics(traces, classes)["macro"]
+    return metrics

@@ -13,10 +13,8 @@ class SMSClassifierSignature(dspy.Signature):
 
 
 class SMSClassifier(dspy.Module):
-    def __init__(self, lm):
-        self.lm = lm
+    def __init__(self):
         super().__init__()
-        dspy.configure(lm=lm)
         self.generate_answer = dspy.Predict(
             SMSClassifierSignature
         )
