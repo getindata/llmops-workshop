@@ -104,6 +104,7 @@ def run_evaluation(models, program , test_ds, classes,  timestamp, prefix="basel
             display_progress=True,
             session_id=session_id,
             lm=lm,
+            max_errors=100,
             provide_traceback=True,
         )
 
