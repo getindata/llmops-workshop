@@ -95,7 +95,7 @@ def plot_metrics(metrics, labels, title):
 def run_evaluation(models, program , test_ds, classes,  run_id, prefix="baseline", cache=False):
     for model in models:
         logging.info(f"Evaluating {model}")
-        lm=dspy.LM(f"ollama/{model}", cache=cache)
+        lm=dspy.LM(f"ollama/{model}", cache=cache, num_retries=20)
         dspy.settings.configure(lm=lm, track_usage=False)
         session_id = f"{prefix}-{model}-{run_id}"
         evaluator = EvaluateWithLangfuse(
