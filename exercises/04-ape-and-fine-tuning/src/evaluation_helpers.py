@@ -92,12 +92,12 @@ def plot_metrics(metrics, labels, title):
     plt.show()
 
 
-def run_evaluation(models, program , test_ds, classes,  timestamp, prefix="baseline", cache=False):
+def run_evaluation(models, program , test_ds, classes,  run_id, prefix="baseline", cache=False):
     for model in models:
         logging.info(f"Evaluating {model}")
         lm=dspy.LM(f"ollama/{model}", cache=cache)
         dspy.settings.configure(lm=lm, track_usage=False)
-        session_id = f"{prefix}-{model}-{timestamp}"
+        session_id = f"{prefix}-{model}-{run_id}"
         evaluator = EvaluateWithLangfuse(
             devset=test_ds,
             num_threads=1,
@@ -111,9 +111,9 @@ def run_evaluation(models, program , test_ds, classes,  timestamp, prefix="basel
         dspy.configure(callbacks=[evaluator])
         evaluator(program=program, metric=validate_answer)
 
-def get_all_metric(models, timestamp, classes, prefix="baseline"):
+def get_all_metric(models, run_id, classes, prefix="baseline"):
     metrics = dict()
     for model in models:
-        traces = fetch_traces(run_id=f"{prefix}-{model}-{timestamp}")
+        traces = fetch_traces(run_id=f"{prefix}-{model}-{run_id}")
         metrics[model] = calculate_metrics(traces, classes)["macro"]
     return metrics
