@@ -1,4 +1,5 @@
 # llmops-workshop
-
-
+* Exercise 1 - Setup [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/getindata/llmops-workshop/blob/workshop-prep/01-setup.ipynb)
+* Exercise 2 - Building GenAI App [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/getindata/llmops-workshop/blob/workshop-prep/02-create-genai-app.ipynb)
+* Exercise 3 - Monitoring, Evaluation, App Deployment [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/getindata/llmops-workshop/blob/workshop-prep/03-monitoring-evaluation-deployment.ipynb)
 * Exercise 4 - Automatic prompt engineering and LLM fine-tuning [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/getindata/llmops-workshop/blob/workshop-prep/04-ape-and-fine-tuning.ipynb)

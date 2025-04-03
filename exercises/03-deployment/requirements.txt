@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-openai
+tiktoken
+langfuse
+lancedb
+langgraph
+docling
+langchain-docling
+gradio
