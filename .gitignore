@@ -178,3 +178,4 @@ exercises/04-ape-and-fine-tuning/mlx/models*
 exercises/04-ape-and-fine-tuning/mlx/fused_model
 mlx/
 mlruns
+exercises/04-ape-and-fine-tuning/data/train/*.jsonl

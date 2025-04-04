@@ -6,3 +6,5 @@ litellm==1.62.4
 #-e /Users/mwiewior/research/git/mlflow
 git+https://github.com/mwiewior/mlflow.git@dspy-bug
 opentelemetry-exporter-otlp-proto-http==1.31.1
+git+https://github.com/ggml-org/llama.cpp.git@2c3f8b850a4a6cff0f5dda2135c03fc81d33ed8b
+mlx-lm==0.22.2
