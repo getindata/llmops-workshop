@@ -1,3 +1,4 @@
+import os
 import types
 from datetime import datetime, timedelta
 from typing import Optional, Callable, List, Union, Any
@@ -97,7 +98,7 @@ class EvaluateWithLangfuse(Evaluate, BaseCallback):
     def langfuse_trace(self, i, o, session, score, ground_truth, pred, prediction_start, prediction_end, **kwargs):
         model = o['model'] if 'model' in o else None
         name = f"Evaluation-{model}"
-        trace_client = self.langfuse.trace(session_id=session, input=i, output=o, name=name, metadata=kwargs)
+        trace_client = self.langfuse.trace(session_id=session, input=i, output=o, name=name, metadata=kwargs, user_id=os.getenv('MY_USER_ID'))
         # Unpack args if they are being used to pass i, o, etc.
         output = o['choices'][0]['message']['content'] if 'choices' in o else None
         prompt_tokens = o['usage']['prompt_tokens'] if 'usage' in o else None
